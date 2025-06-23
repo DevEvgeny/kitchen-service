@@ -22,9 +22,9 @@ class Cook(AbstractUser):
 class Dish(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField()
-    price = models.DecimalField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     dish_type = models.ForeignKey(DishType, on_delete=models.CASCADE, related_name="dishes")
-    cooks = models.ManyToManyField(Cook, on_delete=models.CASCADE, related_name="dishes")
+    cooks = models.ManyToManyField(Cook, related_name="dishes")
 
     class Meta:
         ordering = ["name"]
