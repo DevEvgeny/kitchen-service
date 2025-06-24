@@ -5,12 +5,6 @@ from django.contrib.auth.models import Group
 from kitchen.models import Cook, Dish, DishType
 
 
-# @admin.register(Cook)
-# class CookAdmin(UserAdmin):
-#     list_display = UserAdmin.list_display + ("year_of_experience", )
-#     fieldsets = UserAdmin.fieldsets + (
-#         (("Personal info", {"fields": ("year_of_experience",)}),)
-#     )
 @admin.register(Cook)
 class CookAdmin(UserAdmin):
     fieldsets = list(UserAdmin.fieldsets)
@@ -29,7 +23,13 @@ class DishAdmin(admin.ModelAdmin):
     list_display = ["name",
                     "price",
                     "dish_type",
+                    "get_cooks",
                     ]
+
+    def get_cooks(self, obj):
+        return ", ".join([str(cook) for cook in obj.cooks.all()])
+
+    get_cooks.short_description = "Cooks"
 
 
 admin.site.unregister(Group)
