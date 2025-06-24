@@ -30,3 +30,7 @@ class DishTypeListView(generic.ListView):
 class DishListView(generic.ListView):
     model = Dish
     queryset = Dish.objects.select_related("dish_type")
+
+
+class DishDetailView(generic.DetailView):
+    model = Dish
