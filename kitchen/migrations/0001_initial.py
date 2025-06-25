@@ -51,7 +51,7 @@ class Migration(migrations.Migration):
                 (
                     "last_login",
                     models.DateTimeField(
-                        blank=True, null=True, verbose_name="last login"
+                        blank=True, null=True, verbose_name="last login.html"
                     ),
                 ),
                 (
