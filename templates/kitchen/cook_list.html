@@ -13,7 +13,7 @@
     </tr>
     {% for cook in cook_list %}
     	<tr>
-        <td><a href="#">{{ cook.id }}</a></td>
+        <td><a href="{% url 'kitchen:cook-detail' pk=cook.id %}">{{ cook.id }}</a></td>
         <td>{{ cook.first_name }}</td>
         <td>{{ cook.last_name }}</td>
         <td>{{ cook.username }}</td>
