@@ -38,3 +38,7 @@ class DishListView(LoginRequiredMixin, generic.ListView):
 
 class DishDetailView(LoginRequiredMixin, generic.DetailView):
     model = Dish
+
+
+class CookListView(LoginRequiredMixin, generic.ListView):
+    model = Cook
