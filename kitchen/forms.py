@@ -23,3 +23,4 @@ class CookCreationForm(UserCreationForm):
             "first_name",
             "last_name",
         )
+
