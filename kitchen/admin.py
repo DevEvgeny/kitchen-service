@@ -23,13 +23,13 @@ class DishAdmin(admin.ModelAdmin):
     list_display = ["name",
                     "price",
                     "dish_type",
-                    "get_cooks",
+                    # "get_cooks",
                     ]
 
-    def get_cooks(self, obj):
-        return ", ".join([str(cook) for cook in obj.cooks.all()])
-
-    get_cooks.short_description = "Cooks"
+    # def get_cooks(self, obj):
+    #     return ", ".join([str(cook) for cook in obj.cooks.all()])
+    #
+    # get_cooks.short_description = "Cooks"
 
 
 admin.site.unregister(Group)
