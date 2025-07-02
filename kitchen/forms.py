@@ -24,3 +24,11 @@ class CookCreationForm(UserCreationForm):
             "last_name",
         )
 
+
+class SearchForm(forms.Form):
+    param = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Search"})
+    )
