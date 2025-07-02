@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>All Dish Types <a href="{% url 'kitchen:dish-types-create' %}" class="btn btn-primary link-to-page">
-    Create
-  </a></h1>
+  <h1>All Dish Types
+    <a href="{% url 'kitchen:dish-types-create' %}" class="btn btn-primary">
+      Create
+    </a>
+  </h1>
   {% if dish_type_list %}
     <table class="table">
       <tr>
@@ -18,7 +20,7 @@
 
           <th>{{ dish_type.name }}</th>
           <th><a href="{% url 'kitchen:dish-types-update' pk=dish_type.id %}">Update</a></th>
-          <th><a href="{% url 'kitchen:dish-types-delete' pk=dish_type.id%}">Delete</a></th>
+          <th><a href="{% url 'kitchen:dish-types-delete' pk=dish_type.id %}">Delete</a></th>
         </tr>
       {% endfor %}
     </table>

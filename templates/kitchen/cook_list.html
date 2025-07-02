@@ -1,25 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h1>Cook List <a href="{% url 'kitchen:cook-create' %}">+</a></h1>
+  <h1>Cook List
+    <a href="{% url 'kitchen:cook-create' %}" class="btn btn-primary">
+      Create
+    </a>
+  </h1>
   {% if cook_list %}
-  	<table class="table">
-    <tr>
-      <th>ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-      <th>Year experience</th>
-    </tr>
-    {% for cook in cook_list %}
-    	<tr>
-        <td><a href="{% url 'kitchen:cook-detail' pk=cook.id %}">{{ cook.id }}</a></td>
-        <td>{{ cook.first_name }}</td>
-        <td>{{ cook.last_name }}</td>
-        <td>{{ cook.username }}</td>
-        <td>{{ cook.year_of_experience }}</td>
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        <th>Year experience</th>
       </tr>
-    {% endfor %}
+      {% for cook in cook_list %}
+        <tr>
+          <td><a href="{% url 'kitchen:cook-detail' pk=cook.id %}">{{ cook.id }}</a></td>
+          <td>{{ cook.first_name }}</td>
+          <td>{{ cook.last_name }}</td>
+          <td>{{ cook.username }}</td>
+          <td>{{ cook.year_of_experience }}</td>
+        </tr>
+      {% endfor %}
 
     </table>
   {% endif %}

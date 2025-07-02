@@ -1,30 +1,34 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h1>Dish List <a href="{% url 'kitchen:dish-create' %}">+</a></h1>
+  <h1>Dish List
+    <a href="{% url 'kitchen:dish-create' %}" class="btn btn-primary">
+      Create
+    </a>
+  </h1>
   {% if dish_list %}
     <table class="table">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Type</th>
-    </tr>
-    {% for dish in dish_list %}
       <tr>
-        <td>
-          <a href="{% url 'kitchen:dish-detail' pk=dish.id %}">{{ dish.id }}</a>
-        </td>
-        <td>
-          {{ dish.name }}
-        </td>
-        <td>
-          {{ dish.price }}
-        </td>
-        <td>
-          {{ dish.dish_type }}
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Type</th>
       </tr>
-    {% endfor %}
+      {% for dish in dish_list %}
+        <tr>
+          <td>
+            <a href="{% url 'kitchen:dish-detail' pk=dish.id %}">{{ dish.id }}</a>
+          </td>
+          <td>
+            {{ dish.name }}
+          </td>
+          <td>
+            {{ dish.price }}
+          </td>
+          <td>
+            {{ dish.dish_type }}
+        </tr>
+      {% endfor %}
     </table>
 
   {% endif %}
