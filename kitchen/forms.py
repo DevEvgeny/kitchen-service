@@ -25,6 +25,17 @@ class CookCreationForm(UserCreationForm):
         )
 
 
+class CookUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Cook
+        fields = [
+            "first_name",
+            "last_name",
+            "username",
+            "year_of_experience"
+        ]
+
+
 class SearchForm(forms.Form):
     param = forms.CharField(
         max_length=255,
