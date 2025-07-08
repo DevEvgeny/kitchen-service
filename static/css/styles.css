@@ -1,8 +1,29 @@
-body {
-    margin-top: 20px;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-.link-to-page {
-    float: right;
-    margin: 0 2px 0 2px;
+.login-page {
+    background-image: url("/static/img/kitchen.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.85); /* полупрозрачный белый */
+    padding: 2rem;
+    border-radius: 1rem;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.mb-3 {
+    text-align: center;
 }

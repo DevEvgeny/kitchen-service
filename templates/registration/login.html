@@ -1,19 +1,26 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-  {% if form.errors %}
-    <p>Your username and password didn't match. Please try again.</p>
-  {% endif %}
-  <h1>Login</h1>
+  <div class="login-page">
+    <div class="login-form">
+      {% if form.errors %}
+        <p class="text-danger">Your username and password didn't match. Please try again.</p>
+      {% endif %}
 
-  {% if next %}
-    <p>Please login to see this page.</p>
-  {% endif %}
+      <h1 class="mb-3">Login</h1>
 
-  <form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Login" class="btn btn-primary" />
-    <input type="hidden" name="next" value="{{ next }}" />
-  </form>
+      {% if next %}
+        <p>Please login to see this page.</p>
+      {% endif %}
+
+      <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input type="submit" value="Login" class="btn btn-primary w-100" />
+        <input type="hidden" name="next" value="{{ next }}" />
+      </form>
+    </div>
+  </div>
 {% endblock %}
