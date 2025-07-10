@@ -13,7 +13,11 @@ Python3 must be already installed
   source venv/bin/activate (on macOS)
   pip install -r requirements.txt
 ```
-
+## User for test
+```
+login: admin.kitch
+password: admin1234
+```
 ## Features
 
 * Authentication functionality for Cook/User
