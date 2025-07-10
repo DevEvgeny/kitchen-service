@@ -1,0 +1,228 @@
+[
+{
+    "model": "kitchen.dishtype",
+    "pk": 1,
+    "fields": {
+        "name": "Dessert"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 2,
+    "fields": {
+        "name": "Bread"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 3,
+    "fields": {
+        "name": "Cake"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 4,
+    "fields": {
+        "name": "Pasta"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 5,
+    "fields": {
+        "name": "Pizza"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 6,
+    "fields": {
+        "name": "Soup"
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$OQxKnAFmLvLHb0FY7fq1il$VxlAtcIcZnlXKobH0a/Bb/9bm8iMkJA2Fm4i5uDJ/z0=",
+        "last_login": "2025-07-09T08:19:22.862Z",
+        "is_superuser": true,
+        "username": "admin.kitch",
+        "first_name": "Jonh",
+        "last_name": "Silver",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-06-23T10:10:58Z",
+        "year_of_experience": 2,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$219erapCUylMu2sMpJDaAA$Pl3iyyJ6wQeNA+kXjROYDMlX2rIQaGw5AEvvqhskgdw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "johny",
+        "first_name": "John",
+        "last_name": "Solo",
+        "email": "solo@cook.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-23T11:18:20Z",
+        "year_of_experience": 2,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$JOBmq0Mfzup9mORRNBPrFE$HcLGULoxy9CnBg73sP29u62rRfkenlxmBqLu7PbynMk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cook.two",
+        "first_name": "Jim",
+        "last_name": "Hope",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-30T11:26:00.650Z",
+        "year_of_experience": 5,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$LWbfCECS5GK7EPGJTslv4q$RunIO9ns6CTx214bHKzCyY2doMOQQx+o20EaXSrJaG8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cook.onion",
+        "first_name": "Onion",
+        "last_name": "Help",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-30T11:41:56.709Z",
+        "year_of_experience": 2,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$abOFuKEIwRS6dZ4kPJSQ0n$2PNVjMwWUycC5jVZaleIQGibMqkDdUexD8WuI425fk0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cook.banana",
+        "first_name": "Banana",
+        "last_name": "Ananab",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-30T11:57:18.908Z",
+        "year_of_experience": 2,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$g4jPzDPeCdgAlorHgDrnin$i4u4RlaxjtAorJYrXGD19aqMuVTIYExokNGog7djswI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "naruto",
+        "first_name": "Naruto",
+        "last_name": "Uzumaki",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-06-30T12:00:17.248Z",
+        "year_of_experience": 1,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 1,
+    "fields": {
+        "name": "Tomato Soup",
+        "description": "Some information about this dish",
+        "price": "10.20",
+        "dish_type": 6,
+        "cooks": [
+            3,
+            9
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 2,
+    "fields": {
+        "name": "Varenyky",
+        "description": "Some information about this dish",
+        "price": "15.20",
+        "dish_type": 2,
+        "cooks": [
+            3
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 3,
+    "fields": {
+        "name": "Napoleon",
+        "description": "Some information about this dish",
+        "price": "5.55",
+        "dish_type": 3,
+        "cooks": [
+            2,
+            8,
+            9
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 4,
+    "fields": {
+        "name": "Borsh",
+        "description": "Some information about this dish",
+        "price": "25.55",
+        "dish_type": 6,
+        "cooks": [
+            3,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 5,
+    "fields": {
+        "name": "Kyev",
+        "description": "Some infarmation about this dish",
+        "price": "9.99",
+        "dish_type": 3,
+        "cooks": [
+            3
+        ]
+    }
+}
+]
